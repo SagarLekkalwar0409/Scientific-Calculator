@@ -61,7 +61,7 @@
                       <Component id="bCude" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jButton36" min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="bPi" min="-2" pref="56" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="bzero" min="-2" pref="56" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -194,7 +194,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton36" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="bPi" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="bzero" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="bDot" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="bEqualTo" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
@@ -217,7 +217,6 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="0"/>
         <Property name="alignmentX" type="float" value="1.0"/>
         <Property name="alignmentY" type="float" value="1.0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1026,7 +1025,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bDotActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton36">
+    <Component class="javax.swing.JButton" name="bPi">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1049,7 +1048,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton36ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bPiActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
