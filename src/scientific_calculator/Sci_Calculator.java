@@ -8,25 +8,44 @@ public class Sci_Calculator extends javax.swing.JFrame {
     double num1=0;
     double num2=0;
     String operator=null;
+    
+    
+    
+   //this method for when we chick on ON button then screen is on;
+    
+      public void enable(){
+        
+        t1.setEnabled(true);
+             
+        
+    }
+    //this method for when we chick on Of button then screen is Of;
+    
+     public void disable(){
+        
+        t1.setEnabled(false);
+         
+    }
 
     public Sci_Calculator() {
         initComponents();
+        bOff.setEnabled(true);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
+        buttonGroup1 = new javax.swing.ButtonGroup();
         t1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        bOff = new javax.swing.JRadioButton();
+        bOn = new javax.swing.JRadioButton();
         bSquare = new javax.swing.JButton();
         bPlusMinus = new javax.swing.JButton();
         bRoot = new javax.swing.JButton();
         bCloseB = new javax.swing.JButton();
         bOpenB = new javax.swing.JButton();
-        bInt = new javax.swing.JButton();
+        blog = new javax.swing.JButton();
         bCude = new javax.swing.JButton();
         bSin = new javax.swing.JButton();
         bCos = new javax.swing.JButton();
@@ -51,6 +70,8 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bDot = new javax.swing.JButton();
         bPi = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Scientific Calculator");
@@ -64,36 +85,45 @@ public class Sci_Calculator extends javax.swing.JFrame {
         t1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         t1.setForeground(new java.awt.Color(255, 255, 255));
         t1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        t1.setText("ON FIRST");
         t1.setAlignmentX(1.0F);
         t1.setAlignmentY(1.0F);
-        t1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Scientific Calculator", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 255, 255))); // NOI18N
+        t1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         t1.setCaretColor(new java.awt.Color(255, 255, 255));
         t1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        t1.setDisabledTextColor(new java.awt.Color(153, 153, 153));
+        t1.setEnabled(false);
         t1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 t1ActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("OFF");
-        jRadioButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.MatteBorder(null)))));
-        jRadioButton1.setBorderPainted(true);
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        bOff.setBackground(new java.awt.Color(102, 102, 102));
+        buttonGroup1.add(bOff);
+        bOff.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bOff.setForeground(new java.awt.Color(255, 255, 255));
+        bOff.setSelected(true);
+        bOff.setText("OFF");
+        bOff.setToolTipText("onn");
+        bOff.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.MatteBorder(null)))));
+        bOff.setBorderPainted(true);
+        bOff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                bOffActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(0, 130, 130));
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("ON");
-        jRadioButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.MatteBorder(null)))));
-        jRadioButton2.setBorderPainted(true);
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        bOn.setBackground(new java.awt.Color(102, 102, 102));
+        buttonGroup1.add(bOn);
+        bOn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bOn.setForeground(new java.awt.Color(255, 255, 255));
+        bOn.setText("ON");
+        bOn.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.MatteBorder(null)))));
+        bOn.setBorderPainted(true);
+        bOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                bOnActionPerformed(evt);
             }
         });
 
@@ -102,6 +132,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bSquare.setForeground(new java.awt.Color(255, 255, 255));
         bSquare.setText("x² ");
         bSquare.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bSquare.setEnabled(false);
         bSquare.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bSquareActionPerformed(evt);
@@ -113,6 +144,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bPlusMinus.setForeground(new java.awt.Color(255, 255, 255));
         bPlusMinus.setText("+/-");
         bPlusMinus.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bPlusMinus.setEnabled(false);
         bPlusMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bPlusMinusActionPerformed(evt);
@@ -124,6 +156,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bRoot.setForeground(new java.awt.Color(255, 255, 255));
         bRoot.setText("√ ");
         bRoot.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bRoot.setEnabled(false);
         bRoot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bRootActionPerformed(evt);
@@ -135,6 +168,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bCloseB.setForeground(new java.awt.Color(255, 255, 255));
         bCloseB.setText(")");
         bCloseB.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bCloseB.setEnabled(false);
         bCloseB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCloseBActionPerformed(evt);
@@ -146,20 +180,22 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bOpenB.setForeground(new java.awt.Color(255, 255, 255));
         bOpenB.setText("(");
         bOpenB.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bOpenB.setEnabled(false);
         bOpenB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bOpenBActionPerformed(evt);
             }
         });
 
-        bInt.setBackground(new java.awt.Color(51, 51, 51));
-        bInt.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        bInt.setForeground(new java.awt.Color(255, 255, 255));
-        bInt.setText("inv");
-        bInt.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
-        bInt.addActionListener(new java.awt.event.ActionListener() {
+        blog.setBackground(new java.awt.Color(51, 51, 51));
+        blog.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        blog.setForeground(new java.awt.Color(255, 255, 255));
+        blog.setText("Log");
+        blog.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        blog.setEnabled(false);
+        blog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bIntActionPerformed(evt);
+                blogActionPerformed(evt);
             }
         });
 
@@ -168,6 +204,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bCude.setForeground(new java.awt.Color(255, 255, 255));
         bCude.setText("x³");
         bCude.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bCude.setEnabled(false);
         bCude.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCudeActionPerformed(evt);
@@ -179,6 +216,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bSin.setForeground(new java.awt.Color(255, 255, 255));
         bSin.setText("Sin");
         bSin.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bSin.setEnabled(false);
         bSin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bSinActionPerformed(evt);
@@ -190,6 +228,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bCos.setForeground(new java.awt.Color(255, 255, 255));
         bCos.setText("Cos");
         bCos.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bCos.setEnabled(false);
         bCos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCosActionPerformed(evt);
@@ -201,6 +240,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bTan.setForeground(new java.awt.Color(255, 255, 255));
         bTan.setText("Tan");
         bTan.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bTan.setEnabled(false);
         bTan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bTanActionPerformed(evt);
@@ -212,6 +252,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b9.setForeground(new java.awt.Color(255, 255, 255));
         b9.setText("9");
         b9.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b9.setEnabled(false);
         b9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b9ActionPerformed(evt);
@@ -223,6 +264,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bDel.setForeground(new java.awt.Color(255, 255, 255));
         bDel.setText("DEL");
         bDel.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bDel.setEnabled(false);
         bDel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bDelActionPerformed(evt);
@@ -234,6 +276,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bClear.setForeground(new java.awt.Color(255, 255, 255));
         bClear.setText("AC");
         bClear.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bClear.setEnabled(false);
         bClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bClearActionPerformed(evt);
@@ -245,6 +288,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b7.setForeground(new java.awt.Color(255, 255, 255));
         b7.setText("7");
         b7.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b7.setEnabled(false);
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b7ActionPerformed(evt);
@@ -256,6 +300,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b8.setForeground(new java.awt.Color(255, 255, 255));
         b8.setText("8");
         b8.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b8.setEnabled(false);
         b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b8ActionPerformed(evt);
@@ -267,6 +312,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b6.setForeground(new java.awt.Color(255, 255, 255));
         b6.setText("6");
         b6.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b6.setEnabled(false);
         b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b6ActionPerformed(evt);
@@ -278,6 +324,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b4.setForeground(new java.awt.Color(255, 255, 255));
         b4.setText("4");
         b4.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b4.setEnabled(false);
         b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b4ActionPerformed(evt);
@@ -289,6 +336,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b5.setForeground(new java.awt.Color(255, 255, 255));
         b5.setText("5");
         b5.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b5.setEnabled(false);
         b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b5ActionPerformed(evt);
@@ -300,6 +348,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bMul.setForeground(new java.awt.Color(255, 255, 255));
         bMul.setText("*");
         bMul.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.black, null, null));
+        bMul.setEnabled(false);
         bMul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bMulActionPerformed(evt);
@@ -311,6 +360,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bDivide.setForeground(new java.awt.Color(255, 255, 255));
         bDivide.setText("/");
         bDivide.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.black, null, null));
+        bDivide.setEnabled(false);
         bDivide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bDivideActionPerformed(evt);
@@ -322,6 +372,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b1.setForeground(new java.awt.Color(255, 255, 255));
         b1.setText("1");
         b1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b1.setEnabled(false);
         b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1ActionPerformed(evt);
@@ -333,6 +384,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bPlus.setForeground(new java.awt.Color(255, 255, 255));
         bPlus.setText("+");
         bPlus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.black, null, null));
+        bPlus.setEnabled(false);
         bPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bPlusActionPerformed(evt);
@@ -344,6 +396,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b2.setForeground(new java.awt.Color(255, 255, 255));
         b2.setText("2");
         b2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b2.setEnabled(false);
         b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2ActionPerformed(evt);
@@ -355,6 +408,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         b3.setForeground(new java.awt.Color(255, 255, 255));
         b3.setText("3");
         b3.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        b3.setEnabled(false);
         b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3ActionPerformed(evt);
@@ -366,6 +420,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bMinus.setForeground(new java.awt.Color(255, 255, 255));
         bMinus.setText("-");
         bMinus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.black, null, null));
+        bMinus.setEnabled(false);
         bMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bMinusActionPerformed(evt);
@@ -377,6 +432,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bEqualTo.setForeground(new java.awt.Color(255, 255, 255));
         bEqualTo.setText("=");
         bEqualTo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 4, true));
+        bEqualTo.setEnabled(false);
         bEqualTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bEqualToActionPerformed(evt);
@@ -388,6 +444,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bzero.setForeground(new java.awt.Color(255, 255, 255));
         bzero.setText("0");
         bzero.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bzero.setEnabled(false);
         bzero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bzeroActionPerformed(evt);
@@ -399,6 +456,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bDot.setForeground(new java.awt.Color(255, 255, 255));
         bDot.setText(".");
         bDot.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bDot.setEnabled(false);
         bDot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bDotActionPerformed(evt);
@@ -410,6 +468,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
         bPi.setForeground(new java.awt.Color(255, 255, 255));
         bPi.setText("π");
         bPi.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), null));
+        bPi.setEnabled(false);
         bPi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bPiActionPerformed(evt);
@@ -420,24 +479,20 @@ public class Sci_Calculator extends javax.swing.JFrame {
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 5, true)));
 
+        jTextPane1.setBackground(new java.awt.Color(0, 153, 153));
+        jTextPane1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jTextPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextPane1.setText("Scientific Calculator");
+        jScrollPane1.setViewportView(jTextPane1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(t1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bInt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bSin, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bCos, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bTan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(3, 3, 3)
-                        .addComponent(bCude, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(t1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(bPi, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -446,19 +501,40 @@ public class Sci_Calculator extends javax.swing.JFrame {
                         .addComponent(bDot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bEqualTo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(blog, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bSin, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(bSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(bRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bCude, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(bOpenB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bCloseB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(bCloseB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(bCos, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bTan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(bOff)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bOn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -468,7 +544,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
                                 .addComponent(bDel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bClear, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -478,7 +554,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
                                 .addComponent(bMul, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -489,96 +565,185 @@ public class Sci_Calculator extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(t1, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(t1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(bTan)
-                            .addGap(1, 1, 1))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bInt)
+                            .addComponent(bOff)
+                            .addComponent(bOn))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(blog)
                             .addComponent(bSin)
-                            .addComponent(bCos)))
-                    .addComponent(bCude, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bOpenB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bCloseB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bDel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bClear, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bMul, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bPi, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bzero, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bDot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bEqualTo, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8))
+                            .addComponent(bCos)
+                            .addComponent(bTan)
+                            .addComponent(bPlusMinus))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bCude, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(bSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bOpenB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bCloseB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(8, 8, 8)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bDel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bClear, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bMul, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bPi, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bzero, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bDot, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bEqualTo, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void t1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_t1ActionPerformed
+    private void t1ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void bOffActionPerformed(java.awt.event.ActionEvent evt) {
+    	
+    	//this is for when we click on OFF button then all Key is OFF;
+         b1.setEnabled(false);
+         b2.setEnabled(false);
+         b3.setEnabled(false);
+         b4.setEnabled(false);
+         b5.setEnabled(false);
+         b6.setEnabled(false);
+         b7.setEnabled(false);
+         b8.setEnabled(false);
+         b9.setEnabled(false);
+         bzero.setEnabled(false);
+         
+         bDot.setEnabled(false); 
+         
+         bPlus.setEnabled(false);
+         bMinus.setEnabled(false);
+         bMul.setEnabled(false);
+         bDivide.setEnabled(false);
+         
+         bEqualTo.setEnabled(false);
+         
+         bClear.setEnabled(false);
+         bDel.setEnabled(false);
+         
+         bOpenB.setEnabled(false);
+         bCloseB.setEnabled(false);
+         
+         bSin.setEnabled(false);
+         bCos.setEnabled(false);
+         bTan.setEnabled(false);
+         
+         bCude.setEnabled(false);
+         bSquare.setEnabled(false);
+         
+         bPi.setEnabled(false);
+         
+         bRoot.setEnabled(false);
+         
+         bPlusMinus.setEnabled(false);
+         
+         blog.setEnabled(false);
+         
+         disable();
+         t1.setText("ON First");
+         
+    }
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    private void bOnActionPerformed(java.awt.event.ActionEvent evt) {                                    
+       
+    	//this is for when we click on ON button then all Key is ON;
+         b1.setEnabled(true);
+         b2.setEnabled(true);
+         b3.setEnabled(true);
+         b4.setEnabled(true);
+         b5.setEnabled(true);
+         b6.setEnabled(true);
+         b7.setEnabled(true);
+         b8.setEnabled(true);
+         b9.setEnabled(true);
+         bzero.setEnabled(true);
+         
+         bDot.setEnabled(true); 
+         
+         bPlus.setEnabled(true);
+         bMinus.setEnabled(true);
+         bMul.setEnabled(true);
+         bDivide.setEnabled(true);
+         
+         bEqualTo.setEnabled(true);
+         
+         bClear.setEnabled(true);
+         bDel.setEnabled(true);
+         
+         bOpenB.setEnabled(true);
+         bCloseB.setEnabled(true);
+         
+         bSin.setEnabled(true);
+         bCos.setEnabled(true);
+         bTan.setEnabled(true);
+         
+         bCude.setEnabled(true);
+         bSquare.setEnabled(true);
+         
+         bPi.setEnabled(true);
+         
+         bRoot.setEnabled(true);
+         
+         bPlusMinus.setEnabled(true);
+         
+         blog.setEnabled(true);
+         
+       enable();        
+        t1.setText("");
+         
+    }
 
-    private void bPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlusMinusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bPlusMinusActionPerformed
+    private void bPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {                                           
+         double a=Double.parseDouble(String.valueOf(t1.getText()));
+         a=a*(-1);
+         t1.setText(String.valueOf(a));
+    }
 
-    private void bRootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRootActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bRootActionPerformed
+    private void bRootActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        double a=Math.sqrt(Double.parseDouble(t1.getText()));
+         t1.setText("√(");
+         t1.setText(t1.getText() + a);
+    }
 
     private void bCloseBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCloseBActionPerformed
          t1.setText(t1.getText() + ")");
@@ -588,20 +753,31 @@ public class Sci_Calculator extends javax.swing.JFrame {
          t1.setText(t1.getText() + "(");
     }//GEN-LAST:event_bOpenBActionPerformed
 
-    private void bIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bIntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bIntActionPerformed
+    private void blogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blogActionPerformed
+         double a=Math.log(Double.parseDouble(t1.getText()));
+         t1.setText("");
+         t1.setText(t1.getText() + a);
+    }//GEN-LAST:event_blogActionPerformed
 
     private void bSinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSinActionPerformed
-         t1.setText(t1.getText() + "Sin(");
+         //t1.setText(t1.getText() + "Sin(");
+         double a=Math.sin(Double.parseDouble(t1.getText()));
+         t1.setText("");
+         t1.setText(t1.getText() + a);
     }//GEN-LAST:event_bSinActionPerformed
 
     private void bCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCosActionPerformed
-         t1.setText(t1.getText() + "Cos(");
+         //t1.setText(t1.getText() + "Cos(");
+          double a=Math.cos(Double.parseDouble(t1.getText()));
+         t1.setText("");
+         t1.setText(t1.getText() + a);
     }//GEN-LAST:event_bCosActionPerformed
 
     private void bTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTanActionPerformed
-         t1.setText(t1.getText() + "Tan(");
+         //t1.setText(t1.getText() + "Tan(");
+          double a=Math.tan(Double.parseDouble(t1.getText()));
+         t1.setText("");
+         t1.setText(t1.getText() + a);
     }//GEN-LAST:event_bTanActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
@@ -656,6 +832,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
          t1.setText(t1.getText() + "2");
+         t1.setText("2");
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
@@ -664,12 +841,17 @@ public class Sci_Calculator extends javax.swing.JFrame {
 
     private void bMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMinusActionPerformed
         // t1.setText(t1.getText() + "-");  
+        num1=Double.parseDouble(t1.getText());
         t1.setText("");
          operator="-";
     }//GEN-LAST:event_bMinusActionPerformed
 
     private void bPiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPiActionPerformed
-        
+       //t1.setText(t1.getName() + "π *");
+       
+       double pi;
+       pi=(3.14159265359);
+       t1.setText(String.valueOf(pi));
     }//GEN-LAST:event_bPiActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
@@ -678,6 +860,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         t1.setText(t1.getText() + "1");
+        t1.setText("1");
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
@@ -685,11 +868,15 @@ public class Sci_Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void bCudeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCudeActionPerformed
-        // TODO add your handling code here:
+       double a=Double.parseDouble(String.valueOf(t1.getText()));  
+          a=(a*a*a);
+          t1.setText(String.valueOf(a));
     }//GEN-LAST:event_bCudeActionPerformed
 
     private void bSquareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSquareActionPerformed
-        // TODO add your handling code here:
+          double a=Double.parseDouble(String.valueOf(t1.getText()));  
+          a=(a*a);
+          t1.setText(String.valueOf(a));
     }//GEN-LAST:event_bSquareActionPerformed
 
     private void bDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDotActionPerformed
@@ -770,9 +957,10 @@ public class Sci_Calculator extends javax.swing.JFrame {
     private javax.swing.JButton bDivide;
     private javax.swing.JButton bDot;
     private javax.swing.JButton bEqualTo;
-    private javax.swing.JButton bInt;
     private javax.swing.JButton bMinus;
     private javax.swing.JButton bMul;
+    private javax.swing.JRadioButton bOff;
+    private javax.swing.JRadioButton bOn;
     private javax.swing.JButton bOpenB;
     private javax.swing.JButton bPi;
     private javax.swing.JButton bPlus;
@@ -781,11 +969,12 @@ public class Sci_Calculator extends javax.swing.JFrame {
     private javax.swing.JButton bSin;
     private javax.swing.JButton bSquare;
     private javax.swing.JButton bTan;
+    private javax.swing.JButton blog;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton bzero;
-    private javax.swing.Box.Filler filler1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextField t1;
     // End of variables declaration//GEN-END:variables
 }
