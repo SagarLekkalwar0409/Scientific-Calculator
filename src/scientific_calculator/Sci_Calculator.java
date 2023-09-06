@@ -1,6 +1,6 @@
 
 package scientific_calculator;
- //@author SAGAR SANJAY LEKKALWAR
+ //@author SAGAR S. LEKKALWAR
  
 public class Sci_Calculator extends javax.swing.JFrame {
     
