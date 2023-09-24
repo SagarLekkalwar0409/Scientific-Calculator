@@ -860,7 +860,7 @@ public class Sci_Calculator extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         t1.setText(t1.getText() + "1");
-        t1.setText("1");
+        
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
